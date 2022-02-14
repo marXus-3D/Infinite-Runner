@@ -8,7 +8,7 @@ public class cameraMotor : MonoBehaviour
 	private Vector3 moveVector;
 private float transition = 0f;
 public float animDuration = 2f;
-public Vector3 animOffset = new Vector3(0,5,5);
+public Vector3 animOffset = new Vector3(0,2,5);
 	private Vector3 startOffset;
 
 	void Start () {

@@ -178,17 +178,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 168.262, y: -55.402985, z: -16.432983}
---- !u!1 &942032324
+--- !u!1 &730039088
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 942032328}
-  - component: {fileID: 942032327}
-  - component: {fileID: 942032326}
-  - component: {fileID: 942032325}
+  - component: {fileID: 730039092}
+  - component: {fileID: 730039091}
+  - component: {fileID: 730039090}
+  - component: {fileID: 730039089}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -196,12 +196,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!23 &942032325
+--- !u!23 &730039089
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 942032324}
+  m_GameObject: {fileID: 730039088}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -230,12 +230,12 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &942032326
+--- !u!64 &730039090
 MeshCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 942032324}
+  m_GameObject: {fileID: 730039088}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -244,22 +244,22 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &942032327
+--- !u!33 &730039091
 MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 942032324}
+  m_GameObject: {fileID: 730039088}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &942032328
+--- !u!4 &730039092
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 942032324}
+  m_GameObject: {fileID: 730039088}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.2, z: 47.52}
-  m_LocalScale: {x: 2.7675114, y: 0.9999998, z: 10.669223}
+  m_LocalPosition: {x: 0, y: -1.09, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -297,7 +297,7 @@ MonoBehaviour:
   speed: 5
   verticalVelocity: 0
   gravity: 12
-  animationDuration: 2
+  animationDuration: 3
 --- !u!143 &1181457631
 CharacterController:
   m_ObjectHideFlags: 0
@@ -462,5 +462,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 667754926ace42c41b7290800b24c4cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animDuration: 2
-  animOffset: {x: 0, y: 5, z: 5}
+  animDuration: 3
+  animOffset: {x: 0, y: 2.72, z: 5}
+--- !u!1 &1739261509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1739261510}
+  - component: {fileID: 1739261511}
+  m_Layer: 0
+  m_Name: TileManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1739261510
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1739261509}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1739261511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1739261509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdafff4133687c7428216c9238e92664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilePrefabs:
+  - {fileID: 1724724336797128, guid: 8c2fe5b9ae7cbd940a21cd3c0995e773, type: 2}
+  - {fileID: 1795517178924212, guid: 0c869edc52f972f4ea3442ed0a276c27, type: 2}
