@@ -11,6 +11,7 @@ public class PlayerMotor : MonoBehaviour
 	public float gravity = 12.0f;
 	
 	public float animationDuration = 2f;
+	private bool isDead = false;
 
 	void Start () {
 		controller = GetComponent<CharacterController>();
@@ -18,6 +19,9 @@ public class PlayerMotor : MonoBehaviour
 	
 	
 	void Update () {
+
+		if (isDead)
+			return;
 
 		if (Time.time < animationDuration)
 		{
@@ -50,5 +54,19 @@ public class PlayerMotor : MonoBehaviour
 	public void SetSpeed(float modifier)
 	{
 		speed = 5.0f + modifier;
+	}
+
+ 	//Called everytime it touches a collider
+	private void OnControllerColliderHit(ControllerColliderHit hit)
+	{
+		if(hit.point.z > transform.position.z + controller.radius)
+			Death();
+	}
+
+	private void Death()
+	{
+		isDead = true;
+		Debug.Log("Dead");
+		GetComponent<Score>().OnDeath();
 	}
 }
