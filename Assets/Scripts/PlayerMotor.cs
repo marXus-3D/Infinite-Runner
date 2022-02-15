@@ -43,7 +43,7 @@ public class PlayerMotor : MonoBehaviour
 		}
 
 		//X _ Left and Right
-		moveVector.x = Input.GetAxisRaw("Horizontal") * speed;
+		moveVector.x = Input.GetAxisRaw("Horizontal") * 5;
 		//Y _ Up and Down
 		moveVector.y = verticalVelocity;
 
