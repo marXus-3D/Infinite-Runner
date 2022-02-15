@@ -11,10 +11,12 @@ public class PlayerMotor : MonoBehaviour
 	public float gravity = 12.0f;
 	
 	public float animationDuration = 2f;
+	private float startTime;
 	private bool isDead = false;
 
 	void Start () {
 		controller = GetComponent<CharacterController>();
+		startTime = Time.time;
 	}
 	
 	
@@ -23,7 +25,7 @@ public class PlayerMotor : MonoBehaviour
 		if (isDead)
 			return;
 
-		if (Time.time < animationDuration)
+		if (Time.time - startTime < animationDuration)
 		{
 			controller.Move(Vector3.forward * speed * Time.deltaTime);
 			return;
