@@ -61,7 +61,8 @@ public class PlayerMotor : MonoBehaviour
  	//Called everytime it touches a collider
 	private void OnControllerColliderHit(ControllerColliderHit hit)
 	{
-		if(hit.point.z > transform.position.z + controller.radius)
+		// if u want a better calculation (hit.point.z > transform.position.z + 0.f && hit.gameObject.tag == "Obstacle")
+		if(hit.gameObject.tag == "Obstacle")
 			Death();
 	}
 

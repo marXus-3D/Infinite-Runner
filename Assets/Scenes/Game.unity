@@ -814,7 +814,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  verticalVelocity: 0
+  verticalVelocity: -0.5
   gravity: 12
   animationDuration: 3
 --- !u!143 &1181457631
@@ -828,7 +828,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 2
-  m_Radius: 0.2
+  m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
