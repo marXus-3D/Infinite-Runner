@@ -43,6 +43,9 @@ public class Score : MonoBehaviour
 	public void OnDeath()
 	{
 		isOof = true;
+		if(PlayerPrefs.GetFloat("Highscore") < score)
+		PlayerPrefs.SetFloat ("Highscore", score);
+		
 		deathMenu.ToggleEndMenu(score);
 	}
 }
